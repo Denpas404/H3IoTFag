@@ -1,2 +1,5 @@
 1: Gennemgang af målepinde (IOTMålpinde17682.doc)
 2: Gennemgang af "Den-smalle-digitale-revolution.PDF"
+3: Kiggede og snakkede om "https://www.thethingsnetwork.org/"
+4: Kiggede på "https://ttnmapper.org/heatmap/"
+5: Snak om LoRaWan
