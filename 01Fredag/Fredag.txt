@@ -3,3 +3,4 @@
 3: Kiggede og snakkede om "https://www.thethingsnetwork.org/"
 4: Kiggede på "https://ttnmapper.org/heatmap/"
 5: Snak om LoRaWan
+6: Gennemgang af "Afleverings opgave" 
