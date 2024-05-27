@@ -1,0 +1,11 @@
+1: Gennemgang af hvad der skete fredag
+2: Snak om Arduino, c_Str, 
+3: Forklaring af .ini og dokumentation af platformio
+    3.1: Gennemgang af platformio.org
+    3.2: https://docs.platformio.org/en/latest/platforms/espressif32.html
+    3.3: Library fortræk lokalt
+    3.4: Troubleshooting - se random nerd tutorials
+4: https://randomnerdtutorials.com/
+5: Afslutning af "Hello world" projektet fra i fredags
+
+         
