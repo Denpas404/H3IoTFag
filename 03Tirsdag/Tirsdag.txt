@@ -23,3 +23,5 @@
         2: boot
         3: Ram 
             3.1 (Rtc i bund af ram - når den køre i sleep mode, så den ikke mister ting der er gemt i ram)
+
+6: Vist hvordan man kan gemme filer i spiffs og snakket om LittleFS. Samt snakket om cd, dir, md, rm eller mddir, rmdir
