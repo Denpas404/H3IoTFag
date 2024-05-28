@@ -15,4 +15,11 @@
     esp32 køre altid "Preemptive Scheduling" hvilket betyder at en task, kun har et vist tids interval og køre i, før det bliver parkeret,
     så andre task kan køre, den parkeret task vil blive genoptaget når andre task med højere prioteter er færdige.
 
-4: 
+4: Lav RTOS opgave
+
+5: Efter Frokost:
+    Memory typer:
+        1: flash
+        2: boot
+        3: Ram 
+            3.1 (Rtc i bund af ram - når den køre i sleep mode, så den ikke mister ting der er gemt i ram)
