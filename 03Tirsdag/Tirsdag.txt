@@ -1,0 +1,18 @@
+1: "Recap af mandag" 
+
+2: Interupts, kan kun køre 1 intertup af gangen, man kan lave en "noInerrupts() for at blokere andre interrupts mens 1 køre i forvejn. 
+    huske og tillad interrupts() igen.
+        void loop(){
+            noInterrupts();
+            if (x){
+                xx--;
+                //Do something
+            }
+            interrupts();
+        }
+
+3: FreeRTOS, læs dokument, eller se video om rtos,
+    esp32 køre altid "Preemptive Scheduling" hvilket betyder at en task, kun har et vist tids interval og køre i, før det bliver parkeret,
+    så andre task kan køre, den parkeret task vil blive genoptaget når andre task med højere prioteter er færdige.
+
+4: 
