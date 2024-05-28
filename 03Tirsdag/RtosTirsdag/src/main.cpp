@@ -2,11 +2,11 @@
 
 
 // Define the LED pin
-const int ledPin = 2;
-const int switchPin = 27; // Switch pin
+#define ledPin = 2; // LED pin
+#define switchPin = 27; // Switch pin
 
 // Define semaphore
-SemaphoreHandle_t _semaphore;
+SemaphoreHandle_t _semaphore; 
 
 // Define task handles
 TaskHandle_t task1Handle;
@@ -21,16 +21,15 @@ void task3(void *pvParameters);
 // Define Token
 bool task1Token;
 
-
-
+// Setup function
 void setup() {
   Serial.begin(115200);
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
+  pinMode(ledPin, OUTPUT); // Set the LED pin as output
+  digitalWrite(ledPin, LOW); // Set the LED pin to low
 
   // Declare the semaphore
-  _semaphore = xSemaphoreCreateBinary();
-  xSemaphoreGive(_semaphore);
+  _semaphore = xSemaphoreCreateBinary(); // Create the semaphore
+  xSemaphoreGive(_semaphore); // Give the semaphore
 
   // Declare the taskhandles
   task1Handle = NULL;
@@ -43,7 +42,7 @@ void setup() {
   // Declare tasks
   xTaskCreate(task1, "Task 1", 2048, NULL, 1, &task1Handle);
   xTaskCreate(task2, "Task 2", 2048, NULL, 1, &task2Handle);
-  xTaskCreate(task3, "Task 3", 2048, NULL, 999, &task3Handle);
+  xTaskCreate(task3, "Task 3", 2048, NULL, 2, &task3Handle);
 }
 
 void loop() {
@@ -52,56 +51,48 @@ void loop() {
 
 
 
-// Task 1 
+// Declare Task 1 
 void task1(void *pvParameters) {
   while (1) {
-    if (task1Token) {
-      if (xSemaphoreTake(_semaphore, portMAX_DELAY) == pdTRUE) {
+    if (task1Token) { // Check if the task should run
+      if (xSemaphoreTake(_semaphore, portMAX_DELAY) == pdTRUE) { // Take the semaphore, if it is available
         Serial.println("Task 1 blinking LED");
-
-        digitalWrite(ledPin, HIGH);
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
-        digitalWrite(ledPin, LOW);
-        vTaskDelay(7000 / portTICK_PERIOD_MS); 
-        xSemaphoreGive(_semaphore);
+        digitalWrite(ledPin, HIGH); // Turn on the LED
+        vTaskDelay(3000 / portTICK_PERIOD_MS); // Delay for 3 seconds
+        digitalWrite(ledPin, LOW); // Turn off the LED
+        vTaskDelay(7000 / portTICK_PERIOD_MS); // Delay for 7 seconds
+        xSemaphoreGive(_semaphore); // Release the semaphore
 
       }
     } else {
       vTaskDelay(100 / portTICK_PERIOD_MS); 
-    }
-    vTaskPrioritySet(task2Handle, 2);
-    vTaskPrioritySet(task1Handle, 1);
+    }   
   }
 }
 
-// Task 2 
+// Declare Task 2
 void task2(void *pvParameters) {
-  while (1) {
-    if (xSemaphoreTake(_semaphore, portMAX_DELAY) == pdTRUE) {
-      Serial.println("Task 2 blinking LED");
+  while (1) {  
+    if (xSemaphoreTake(_semaphore, portMAX_DELAY) == pdTRUE) { // Take the semaphore, if it is available
+      Serial.println("Task 2 blinking LED"); 
       for (int i = 0; i < 20; i++) {
-        digitalWrite(ledPin, HIGH);
+        digitalWrite(ledPin, HIGH); 
         vTaskDelay(500 / portTICK_PERIOD_MS); 
         digitalWrite(ledPin, LOW);
         vTaskDelay(500 / portTICK_PERIOD_MS); 
       }
-      xSemaphoreGive(_semaphore);
-
-
-    }
-    vTaskPrioritySet(task1Handle, 2); 
-    vTaskPrioritySet(task2Handle, 1); 
+      xSemaphoreGive(_semaphore); // Release the semaphore
+    }    
   }
 }
 
-
-// Task 3 
+// Declare Task 3 
 void task3(void *pvParameters) {
-  pinMode(switchPin, INPUT_PULLUP);
+  pinMode(switchPin, FALLING); // Set the switch pin as input
   while (1) {
-    if (digitalRead(switchPin) == LOW) { 
-    task1Token = !task1Token; 
-    Serial.print("Task state: " );
+    if (digitalRead(switchPin) == LOW) {  // Check if the switch is pressed
+    task1Token = !task1Token;  // Toggle the token value 
+    Serial.print("Task state: " ); 
     Serial.println(String(task1Token));
     }
     vTaskDelay(100 / portTICK_PERIOD_MS); 
