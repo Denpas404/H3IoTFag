@@ -4,8 +4,12 @@
     3.1: Gennemgang af platformio.org
     3.2: https://docs.platformio.org/en/latest/platforms/espressif32.html
     3.3: Library fortræk lokalt
-    3.4: Troubleshooting - se random nerd tutorials
-4: https://randomnerdtutorials.com/
-5: Afslutning af "Hello world" projektet fra i fredags
+    3.4: Troubleshooting - se random nerd tutorials 
+4: https://randomnerdtutorials.com/ - https://www.arduino.cc/reference/en/?_gl=1*1tscjfp*_ga*MTEzNDc0NDE3OS4xNzE2Nzk4NzA2*_ga_NEXN8H46L5*MTcxNjc5ODcwNS4xLjEuMTcxNjc5ODcxNC4wLjAuMjg5NDk0Njky*_fplc*Q1h4V1hIZDFrVVdjcGVYVVNTMGJtcng4VVhUalE2dmJJTzVId1dvUURoZXFPakluN0tjQ0dNTHJXQUdrclZnZGlkR1ViMHBLeUo1NWhxWFAzM2ZRMCUyRmtjY2x6bzJFMERuZW13Y3F5JTJGR1NNSXpGc1NESG1NamczSXJsUUJkQSUzRCUzRA..
+5: Gennemgang af "Hello world" projektet fra i fredags
+6: Gennemgang af datasheet for esp32
+    6.1: https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
+7: RTC GPIO, til at vække mc
+
 
          
