@@ -6,3 +6,5 @@
     1.5 Max 4 gb file størrelse
 
 2: Webserver projecter  
+    2.1: https://randomnerdtutorials.com/esp32-web-server-arduino-ide/ (Webserver01)
+    2.2:  (Webserver02)
