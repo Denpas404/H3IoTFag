@@ -7,4 +7,4 @@
 
 2: Webserver projecter  
     2.1: https://randomnerdtutorials.com/esp32-web-server-arduino-ide/ (Webserver01)
-    2.2:  (Webserver02)
+    2.2: https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/ (WebServer02Spiffs)
