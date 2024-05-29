@@ -1,0 +1,8 @@
+1: Recap af tirsdag
+    1.1 flash og boot/flash = Non volatile (Dvs at data forvinder ikke, når strømmen går)
+    1.2 Data der ligger i RTC(Real time clock) overlever kun så længe der er strøm på micro controlleren
+    1.3 Det det handler om hvor data, kode, variabler skal ligge.
+    1.4 Serial.print(F("Hello world")); - (f) gør at man bruger "flash Memory" i stedet for ram (man flytter "text" konstanter).
+    1.5 Max 4 gb file størrelse
+
+2: Webserver projecter  
