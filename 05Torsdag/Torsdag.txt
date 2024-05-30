@@ -1,0 +1,14 @@
+1: Snak om hvad vi mangler, lora exemple og opstarts parameters? 
+    1.1 "Sikkerhed", klokkeslæt /Time 
+
+2: Projekt: https://randomnerdtutorials.com/esp32-wi-fi-manager-asyncwebserver/
+
+3:  "Libs" 
+    3.1: Header file:
+        #ifndef *navn*
+        #define *navn*
+
+4:  Projekt bluetooth : https://randomnerdtutorials.com/esp32-wi-fi-provisioning-ble-arduino/
+    4.1:    https://community.platformio.org/t/platformio-esp32-partitions/33792/2
+
+5: 
