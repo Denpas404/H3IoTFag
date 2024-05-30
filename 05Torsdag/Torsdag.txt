@@ -11,4 +11,18 @@
 4:  Projekt bluetooth : https://randomnerdtutorials.com/esp32-wi-fi-provisioning-ble-arduino/
     4.1:    https://community.platformio.org/t/platformio-esp32-partitions/33792/2
 
-5: 
+5: Micro_dns - include ESPmDNS.h
+    i setup - efter wifi-.begin:
+        if (!mdns.begin("navn")){
+            serial.prinln("et eller andet");
+            while (1){
+                delay 1000
+            }
+        }
+
+6: Time (tid):
+    6.1: For at logge tid mht data eller beregne tid mellem dato'er
+    6.2: Esp32 har real time clock, men den kan ikke synkronisere automatisk. Derfor kan man bruge NTP lib,
+         #include "time.h"
+         6.2.1: Vær opmærksom på tidzoner og sommer tid. 
+    6.3: Se https://randomnerdtutorials.com/esp32-date-time-ntp-client-server-arduino/
