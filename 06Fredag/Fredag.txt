@@ -1,0 +1,5 @@
+1: Kort recap af torsdag.
+
+2: Time library - time.h / ntp
+
+3:  
