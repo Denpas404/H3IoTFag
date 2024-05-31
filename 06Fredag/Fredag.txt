@@ -2,4 +2,13 @@
 
 2: Time library - time.h / ntp
 
-3:  
+3:  https://randomnerdtutorials.com/esp32-over-the-air-ota-programming/
+
+4: https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-web-server-arduino-ide/
+    4.1:    https://randomnerdtutorials.com/esp32-esp8266-plot-chart-web-server/
+    4.2:    https://www.highcharts.com/demo
+
+5:  Krav til opgaven - se dokument: "Afsluttende opgave IOT del1"
+    -Wifi manager
+    -Visning graf   evt highcharts
+    -under menuer 
